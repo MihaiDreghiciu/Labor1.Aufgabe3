@@ -55,5 +55,18 @@ public class BigNumberArray {
         return result;
     }
 
+    public static int[] divide(int[] a, int divisor) {
+        int n = a.length;
+        int[] result = new int[n];
+        int remainder = 0;
+
+        for (int i = 0; i < n; i++) {
+            int current = remainder * 10 + a[i];
+            result[i] = current / divisor;
+            remainder = current % divisor;
+        }
+
+        return result;
+    }
 
 }
